@@ -1,0 +1,853 @@
+/*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Open Sans', sans-serif;
+ 
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .visually-hidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * The use of `table` rather than `block` is only necessary if using
+ * `::before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+
+  *,
+  *::before,
+  *::after {
+
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
+
+p{font-size: 18px;}
+
+h2{font-size: 24px;}
+
+
+.content-wrapper {
+
+  min-height: 670px;
+}
+
+
+.logo img {
+  height: 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: #fff;
+  height: 80px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav li {
+  padding-left: 2rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #0d47a1
+}
+
+
+#index-hero {
+  width: 100%;
+  height: 680px;
+  position: absolute;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: 55%;
+  -moz-background-size: 55%;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  background-size: 55%;
+  background-position-x: right;
+  background-position-y: bottom;
+  margin-top: 80px;
+
+
+
+
+}
+
+#my-blurb {
+  padding: 24px;
+  font-size: 24px;
+  font-weight: 800;
+  border: 3px solid #000;
+  border-radius: 32px 32px 0px 32px;
+  box-shadow: 9px 6px 0px -1px rgba(0, 0, 0, 0.08);
+  -webkit-box-shadow: 9px 6px 0px -1px rgba(0, 0, 0, 0.08);
+  -moz-box-shadow: 9px 6px 0px -1px rgba(0, 0, 0, 0.08);
+}
+
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+  #index-hero {
+    width: 100%;
+    height: 600px;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-background-size: 40%;
+    -moz-background-size: 40%;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    background-size: 85%;
+    background-position-x: right;
+    background-position-y: bottom;
+  }
+
+}
+
+
+
+
+/* ==========================================================================
+   company sections ---------- >
+   ========================================================================== */
+
+
+
+
+.index-company-section {
+  margin-top: 74px;
+}
+
+.work-section-title {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+
+
+.work-section-title span {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+
+
+
+
+
+
+
+
+#Finance-index-img {
+  background: lightblue url("img/homepage/Auction-rebrand-index.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+
+
+#MR-index-img {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+
+#Auction-Rebrand-index-img {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+#Auction-TPS-index-img {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#Ten-x-offerselect-index-img {
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+
+}
+
+
+#Auction-index-android-app-img {
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+
+}
+
+#chimecard-index-img {
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+
+#Movoto-index-img {
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+
+
+
+
+.project-container {
+  background: #fff;
+  height: 300px;
+  box-shadow: 0px 45px 100px rgba(0, 0, 0, .4);
+  cursor: pointer;
+  border-radius: 12px;
+  transition: .10s ease-in-out;
+  position: relative;
+  overflow: hidden;
+
+
+
+  .view-project {
+    font-size: 32px;
+    position: absolute;
+    color: #fff;
+    right: 120px;
+    bottom: -70px;
+    font-weight: 500;
+  }
+
+  .view-project-arrow {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    right: -45px;
+    bottom: 43%;
+    transition: .10s ease-in-out;
+    z-index: 3;
+  }
+
+  .hover-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    z-index: 2;
+    opacity: 0;
+    transition: .10s ease-in-out;
+    border-radius: 12px;
+  }
+
+
+}
+
+.project-container:hover {
+
+  height: 300px;
+  box-shadow: 0px 12px 32px rgba(0, 0, 0, .2);
+
+  .view-project {
+    position: absolute;
+    right: 120px;
+    bottom: 33%;
+    z-index: 4;
+  }
+
+  .view-project-arrow {
+    position: absolute;
+    right: 54px;
+
+
+  }
+
+  .hover-overlay {
+
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #FF2565;
+    z-index: 2;
+    opacity: .8;
+  }
+
+}
+
+.project-container {
+  position: relative;
+}
+
+.index-project-info {
+  position: absolute;
+  bottom: 0px;
+  left: 32px;
+  z-index: 4;
+  
+
+}
+
+.index-project-info h2 {
+  color: #fff;
+  font-weight: 800;
+  font-size: 14px;
+  background-color: #000;
+  padding: 4px 4px 4px 10px;
+  width:80%;
+  margin-bottom:-32px;
+
+}
+
+.index-project-info p {
+  color: #fff;
+  background-color: #000;
+  font-size: 30px;
+  font-weight: 300;
+  padding: 4px 4px 4px 8px;
+  
+}
+
+
+
+
+
+
+
+
+
+
+.project-company-name{
+
+ font-size: 16px; 
+ font-weight: 800;
+ color: #ccc;
+
+
+}
+
+
+.project-name{
+
+font-weight: 800;
+font-size: 32px;  
+  
+}
+
+
+.project-header-image{
+
+height: 360px;
+width: 100%;
+
+}
+
+img{
+width: 100%;
+
+}
+
+#project-header-image-360-Finance{
+
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+
+}
+
+
+
+
+
+/* --   ----- ----  Product Style Sheet ---- - - --- - */
+
+
+
+.backHome{
+  font-size:16px;
+  padding-top:px;
+  display:flex;
+  align-items:center;
+  color:#ccc;
+
+}
+.backArrow{
+width:24px;
+margin-right:12px;
+}
+
+.backHome:hover{
+
+color:#333;
+}
+
+
+.backArrow{
+width:24px;
+margin-right:12px;
+}
+
+
+
+
+.spacing-small{
+  height: 32px;
+}
+.spacing-medium{
+  height: 54px;
+}
+.spacing-large{
+  height: 62px;
+}
+.spacing-xlarge{
+  height: 80px;
+}
+.spacing-xxlarge{
+  height: 100px;
+}
+
+
+/* ==== GRID SYSTEM ==== */
+
+.container {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row {
+  position: relative;
+  width: 100%;
+}
+
+.row [class^="col"] {
+  float: left;
+  margin: 0.5rem 2%;
+  min-height: 0.125rem;
+}
+
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12 {
+  width: 96%;
+}
+
+.col-1-sm {
+  width: 4.33%;
+}
+
+.col-2-sm {
+  width: 12.66%;
+}
+
+.col-3-sm {
+  width: 21%;
+}
+
+.col-4-sm {
+  width: 29.33%;
+}
+
+.col-5-sm {
+  width: 37.66%;
+}
+
+.col-6-sm {
+  width: 46%;
+}
+
+.col-7-sm {
+  width: 54.33%;
+}
+
+.col-8-sm {
+  width: 62.66%;
+}
+
+.col-9-sm {
+  width: 71%;
+}
+
+.col-10-sm {
+  width: 79.33%;
+}
+
+.col-11-sm {
+  width: 87.66%;
+}
+
+.col-12-sm {
+  width: 96%;
+}
+
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.hidden-sm {
+  display: none;
+}
+
+@media only screen and (min-width: 33.75em) {
+
+  /* 540px */
+  .container {
+    width: 90%;
+  }
+}
+
+@media only screen and (min-width: 45em) {
+
+  /* 720px */
+  .col-1 {
+    width: 4.33%;
+  }
+
+  .col-2 {
+    width: 12.66%;
+  }
+
+  .col-3 {
+    width: 21%;
+  }
+
+  .col-4 {
+    width: 29.33%;
+  }
+
+  .col-5 {
+    width: 37.66%;
+  }
+
+  .col-6 {
+    width: 46%;
+  }
+
+  .col-7 {
+    width: 54.33%;
+  }
+
+  .col-8 {
+    width: 62.66%;
+  }
+
+  .col-9 {
+    width: 71%;
+  }
+
+  .col-10 {
+    width: 79.33%;
+  }
+
+  .col-11 {
+    width: 87.66%;
+  }
+
+  .col-12 {
+    width: 96%;
+  }
+
+  .hidden-sm {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 60em) {
+
+  /* 960px */
+  .container {
+    width: 90%;
+    max-width: 68rem;
+  }
+}
